@@ -3,6 +3,9 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine
 from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path=".env.local")
 
 def export_db_to_files(db_connection, export_dir="vectordb/knowledge_base"):
     """Export database tables to files for vector storage"""
@@ -35,10 +38,16 @@ def export_db_to_files(db_connection, export_dir="vectordb/knowledge_base"):
     # Export clients
     try:
         clients_df = pd.read_sql("""
-                                 SELECT c.*, e.Nombre as enterprise_name, e.Id as enterprise_id
-                                 FROM Clients c
-                                          JOIN ClientCompanies cc ON c.Id = cc.ClienteId
-                                          JOIN Companies e ON e.Id = cc.EmpresaId
+SELECT 
+    c.*,
+    GROUP_CONCAT(e.Nombre SEPARATOR ', ') as enterprise_names,
+    GROUP_CONCAT(e.Id SEPARATOR ', ') as enterprise_ids
+FROM 
+    Clients c
+    JOIN ClientCompanies cc ON c.Id = cc.ClienteId
+    JOIN Companies e ON e.Id = cc.EmpresaId
+GROUP BY 
+    c.CodigoCliente, c.Id, c.NombreCompleto
                                  """, db_connection)
         print(f"Exported {len(clients_df)} clients")
 
@@ -62,8 +71,8 @@ def export_db_to_files(db_connection, export_dir="vectordb/knowledge_base"):
                 file_path = f"{export_dir}/clients_enterprise_{enterprise_id}.json"
                 with open(file_path, "w") as f:
                     json.dump({
-                        "enterprise_id": str(enterprise_id),
-                        "enterprise_name": group.iloc[0]["enterprise_name"],
+                        "enterprise_ids": str(enterprise_id),
+                        "enterprises_names": group.iloc[0]["enterprise_name"],
                         "clients": clients_list
                     }, f, indent=2)
                 file_paths.append(file_path)
@@ -185,6 +194,7 @@ def build_vector_index(data_dir="vectordb/knowledge_base", index_dir="./vector_i
     import openai
 
     # Get API key from environment (which should be loaded from .env.local)
+    os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
     openai_api_key = os.getenv("OPENAI_API_KEY")
 
     if openai_api_key:

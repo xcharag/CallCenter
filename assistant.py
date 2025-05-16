@@ -89,7 +89,8 @@ async def entrypoint(ctx: JobContext):
         vad=silero.VAD.load(),
         stt=groq.STT(model="whisper-large-v3-turbo",language="es"),
         llm=openai.LLM(
-            model="gpt-4o"
+            model="gpt-4o",
+            tool_choice="auto"
         ),
         tts=elevenlabs.TTS(
             voice_id="VmejBeYhbrcTPwDniox7",
