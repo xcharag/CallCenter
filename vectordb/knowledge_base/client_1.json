@@ -1,0 +1,11 @@
+{
+  "client_id": "1",
+  "name": "Pepe Grillo",
+  "enterprise_id": "2",
+  "enterprise_name": "Publicarte",
+  "type": "client",
+  "carnetIdentidad": "2834312",
+  "email": "pepe@gmail.com",
+  "phoneNumber": "77398213",
+  "address": "Calle Alemania"
+}

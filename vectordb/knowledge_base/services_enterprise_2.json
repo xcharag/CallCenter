@@ -1,0 +1,12 @@
+{
+  "enterprise_id": "2",
+  "enterprise_name": "Publicarte",
+  "services": [
+    {
+      "service_id": "3",
+      "name": "Publicaciones",
+      "description": "Este servicio brinda informacion acerca de los proximos lanzamientos de libros, precio y lugar de lanzamiento si es que existe alguno",
+      "type": "service"
+    }
+  ]
+}
