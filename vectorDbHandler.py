@@ -4,7 +4,6 @@ import pandas as pd
 from sqlalchemy import create_engine
 from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
 
-
 def export_db_to_files(db_connection, export_dir="vectordb/knowledge_base"):
     """Export database tables to files for vector storage"""
 

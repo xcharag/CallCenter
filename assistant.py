@@ -104,5 +104,9 @@ async def entrypoint(ctx: JobContext):
     )
 
 
-if __name__ == "__main__":
+def start_assistant():
+    """Start the LiveKit agent"""
     cli.run_app(WorkerOptions(entrypoint_fnc=entrypoint))
+
+if __name__ == "__main__":
+    start_assistant()
