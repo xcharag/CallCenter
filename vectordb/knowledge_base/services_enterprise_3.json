@@ -1,0 +1,18 @@
+{
+  "enterprise_id": "3",
+  "enterprise_name": "Burger King",
+  "services": [
+    {
+      "service_id": "4",
+      "name": "Encargos de Hamburguesa",
+      "description": "Este servicio se encarga para hacer pedidos grandes de hamburguesas",
+      "type": "service"
+    },
+    {
+      "service_id": "5",
+      "name": "Encargo de Papas fritas",
+      "description": "Este servicio se encarga para hacer pedidos grandes de papa fritas",
+      "type": "service"
+    }
+  ]
+}

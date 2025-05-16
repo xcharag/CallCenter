@@ -1,0 +1,9 @@
+{
+  "enterprise_id": "COM003",
+  "name": "Burger King",
+  "type": "Company",
+  "phoneNumber": "77398598",
+  "email": "burger@gmail.com",
+  "city": "Santa Cruz",
+  "address": "Av Banzer"
+}
