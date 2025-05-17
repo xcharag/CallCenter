@@ -29,7 +29,7 @@ async def test_vector_db():
         test_queries = [
             "Jorge Urioste",
             "Nicolita numberg Burger King",
-            "Pedi hamburguesas pero el pedido aun no llega"
+            "Ahora soy nancy velazquez de la upsa"
         ]
 
         for query in test_queries:

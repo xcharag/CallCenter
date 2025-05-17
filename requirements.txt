@@ -1,0 +1,18 @@
+# Core dependencies
+livekit-agents>=0.7.0
+llama-index>=0.10.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# LiveKit plugins
+livekit-plugins>=0.7.0
+
+# Embeddings and language models
+llama-index-embeddings-openai>=0.1.0
+
+# Vector store
+llama-index-vector-stores-simple>=0.1.0
+
+# Optional: development dependencies
+pytest>=7.0.0
+black>=23.0.0
