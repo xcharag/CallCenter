@@ -8,23 +8,32 @@ from livekit.agents import (
     cli,
 )
 from livekit.plugins import groq, silero, elevenlabs, openai
+import json
 from dotenv import load_dotenv
-from tools import  query_info
+from tools import  query_info, save_transcript_database
 from datetime import datetime
-import os
+import re
 
 load_dotenv(dotenv_path=".env.local")
 
 async def entrypoint(ctx: JobContext):
     await ctx.connect(auto_subscribe=AutoSubscribe.AUDIO_ONLY)
-    participant = await ctx.wait_for_participant()
 
     async def write_transcript():
-        current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        filename = f"call_{participant.sid}_{current_date}_{ctx.room.name}.json"
+        current_date = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
+        # Use current directory instead of /tmp
+        filename = f"transcript_{current_date}.json"
+
+        history_dict = session.history.to_dict()
         with open(filename, "w") as f:
-            json.dump({"call_sid": participant.sid, "room_name": ctx.room.name}, f, indent=2)
+            json.dump(history_dict, f, indent=2)
+
+        save_transcript_database(
+            filepath=filename,
+            room_name=ctx.room.name
+        )
+        print(f"Transcript saved to {filename}")
 
     ctx.add_shutdown_callback(write_transcript)
 
@@ -72,6 +81,18 @@ async def entrypoint(ctx: JobContext):
             If the client accepts the AI-generated solution, present it and then ask if the issue was resolved.
 
             If you found a verified solution, also present it and ask if it solved the problem.
+            
+            PROTOCOL INTERPRETATION:
+            When the query_info tool returns a protocol:
+            1. Extract the key steps and resolution options
+            2. Synthesize this into a clear, concise solution
+            3. Present it as a verified solution, without reading out the raw protocol text
+            4. Follow up by asking if the solution resolves their problem
+            
+            For example, if a protocol for "Pedido Demorado" is found, don't just read the markdown - 
+            summarize the key points like: "He encontrado una solución verificada para problemas de 
+            pedidos retrasados: Comunique el retraso al cliente y ofrezca una compensación o descuento 
+            si es posible. Confirme el tiempo de espera estimado."
 
             RESULT PRESENTATION:
             If the verified solution solves the problem:
@@ -110,7 +131,7 @@ async def entrypoint(ctx: JobContext):
     )
 
     await session.start(agent=agent, room=ctx.room)
-    await session.say("Hola, Soy un Agente de IA de SmartVoz. ¿Cuál es su nombre y la empresa a la que pertenece?")
+    await session.say("Hola, Soy un Agente de IA de SmartVoz. ¿Cuál es su nombre y el nombre de la empresa con la que necesita ayuda?")
     await session.generate_reply(
         instructions="Eres un agente de IA que como primer respuesta espera el nombre del cliente y el nombre de la empresa a la que pertenece el cliente",
     )

@@ -1,17 +1,11 @@
 {
   "enterprise_id": "1",
-  "enterprise_name": "UPSA",
+  "enterprise_name": "Cotas",
   "services": [
     {
-      "service_id": "1",
-      "name": "Inscripciones",
-      "description": "Este servicio es para realizar la inscripcion al semestre correspondiente a la Universidad UPSA, se encarga de informar al usuario de los metodos de pagos, horarios, etc",
-      "type": "service"
-    },
-    {
-      "service_id": "2",
-      "name": "Pago de Cuotas",
-      "description": "Este servicio esta enfocado en el pago de cuotas de la universidad, para estudiantes que ya estan inscritos al semestre, nosotros como call center no manejamos los estudiantes inscritos pero si ayudamos y guiamos para los pagos ,etc",
+      "service_id": "4",
+      "name": "Pago de Factura Internet",
+      "description": "Este servicio permite a los usuarios conocer los metodos de pago, para pagar las facturas de internet",
       "type": "service"
     }
   ]

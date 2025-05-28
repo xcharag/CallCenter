@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "item_3caa5be2a9eb",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hola, Soy un Agente de IA de SmartVoz. \u00bfCu\u00e1l es su nombre y el nombre de la empresa con la que necesita ayuda?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_2ad7f88b5aa8",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        ""
+      ],
+      "interrupted": true
+    },
+    {
+      "id": "item_9dcaa7eef766",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Mi nombre es Oscar y necesito ayuda con la empresa CRE."
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_61086581e1dc",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "\u00bfEn qu\u00e9 puedo ayudarle hoy con la empresa CRE?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_124e26aaedbe",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Quiero pagar mis facturas y necesito una gu\u00eda de qu\u00e9 tengo que hacer para pagarla."
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_2c9b0db9cf14",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "No encontr\u00e9 una soluci\u00f3n verificada, pero puedo ofrecerle una gu\u00eda generada por IA para pagar sus facturas con CRE:\n\n1. Acceda al portal en l\u00ednea de CRE.\n2. Inicie sesi\u00f3n con su usuario y contrase\u00f1a.\n3. Vaya a la secci\u00f3n de facturaci\u00f3n.\n4. Seleccione las facturas que desea pagar.\n5. Elija su m\u00e9todo de pago preferido.\n6. Confirme y realice el pago.\n\n\u00bfEsta informaci\u00f3n le fue \u00fatil?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_d7ef17a30c2e",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "S\u00ed, gracias."
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_b16db7880f80",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Me alegra que haya podido resolver su problema. \u00bfNecesita m\u00e1s ayuda con algo m\u00e1s?"
+      ],
+      "interrupted": false
+    }
+  ]
+}

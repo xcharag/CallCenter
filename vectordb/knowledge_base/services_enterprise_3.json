@@ -1,17 +1,17 @@
 {
   "enterprise_id": "3",
-  "enterprise_name": "Burger King",
+  "enterprise_name": "Pizzeria",
   "services": [
     {
-      "service_id": "4",
-      "name": "Encargos de Hamburguesa",
-      "description": "Este servicio se encarga para hacer pedidos grandes de hamburguesas",
+      "service_id": "1",
+      "name": "Entrega Pizza",
+      "description": "Este servicio consiste en la entrega a domicilio de los pedidos de pizza de los clientes",
       "type": "service"
     },
     {
-      "service_id": "5",
-      "name": "Encargo de Papas fritas",
-      "description": "Este servicio se encarga para hacer pedidos grandes de papa fritas",
+      "service_id": "2",
+      "name": "Encargo Pizza",
+      "description": "Este servicio es cuando un cliente decide hacer un pedido muy grande de pizza (superior a 10 pizzas) y se necesita una mejor organizacion",
       "type": "service"
     }
   ]

@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": "item_f6bbdb50b59e",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hola, Soy un Agente de IA de SmartVoz. \u00bfCu\u00e1l es su nombre y el nombre de la empresa con la que necesita ayuda?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_999ff479de3e",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hola, Soy un Agente de IA de Smart"
+      ],
+      "interrupted": true
+    },
+    {
+      "id": "item_e74e50d4a212",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Me llamo Oscar."
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_6f0a11584383",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "y necesito ayuda con CRE"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_2e1c857a1f5a",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Por favor, d\u00edgame el nombre de la empresa con la que est\u00e1 asociado para"
+      ],
+      "interrupted": true
+    },
+    {
+      "id": "item_24114d8afe8f",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "\u00bfEn qu\u00e9 puedo ayudarle hoy, Oscar, en relaci\u00f3n con su empresa CRE?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_53716708f683",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Necesito, no s\u00e9 c\u00f3mo pagar mis facturas, necesito indicaciones de c\u00f3mo hacerlo."
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_de2cbc388c29",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "He encontrado una soluci\u00f3n verificada para el pago de facturas con CRE:\n\n1. Acceda a la p\u00e1gina oficial de CRE.\n2. Dir\u00edjase a la secci\u00f3n \"Pagos y Facturaci\u00f3n\".\n3. Puede realizar el pago utilizando tarjeta de cr\u00e9dito o d\u00e9bito.\n4. Tambi\u00e9n es posible pagar en puntos autorizados.\n\n\u00bfEsta informaci\u00f3n resuelve su problema?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_27bd5938230d",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "\u00bfQu\u00e9 documento necesitar\u00eda llevar si voy a un punto autorizado?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_bb50dfd79d62",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Necesitar\u00e1 llevar una copia de su factura actual y una identificaci\u00f3n v\u00e1lida para realizar el pago en un punto autorizado. Tambi\u00e9n es recomendable tener el n\u00famero de cuenta de servicio a mano. \n\n\u00bfHay algo m\u00e1s en lo que pueda ayudarle?"
+      ],
+      "interrupted": false
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "item_61d8f17a4e72",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hola, Soy un Agente de IA de SmartVoz. \u00bfCu\u00e1l es su nombre y el nombre de la empresa con la que necesita ayuda?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_1d83fcca4b65",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hola, \u00bfpuedes proporcionarme tu nombre y el nombre de la empresa a la que perteneces, por favor?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_f4b0dedf2df8",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Mi nombre es Nicole Nunberg y pertenezco a la empresa Cotas."
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_5e7177b6b8c5",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "\u00bfEn qu\u00e9 puedo ayudarle hoy, Nicole?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_b97ff619fadc",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Necesito una gu\u00eda para pagar mis facturas de CRE."
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_4f2d72a6f841",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "No encontr\u00e9 una soluci\u00f3n verificada espec\u00edficamente relacionada con el pago de facturas de CRE. Sin embargo, puedo generar una soluci\u00f3n AI no verificada para guiarte en el proceso. \u00bfTe gustar\u00eda que lo haga?"
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_18d77cf204ff",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Bueno..."
+      ],
+      "interrupted": false
+    },
+    {
+      "id": "item_194d6513606f",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Para pagar tus facturas de CRE, puedes seguir estos pasos generales:\n\n1. Ingresa al sitio web oficial de CRE.\n2. Busca la opci\u00f3n de pagos o facturaci\u00f3n.\n3. Inicia sesi\u00f3n con tus credenciales; si a\u00fan no tienes una cuenta, reg\u00edstrate.\n4. Una vez dentro, selecciona la factura que deseas pagar.\n5. Elige el m\u00e9todo de pago: tarjeta de cr\u00e9dito, d\u00e9bito en cuenta bancaria o puntos de pago autorizados.\n6. Sigue las instrucciones en pantalla para completar el pago.\n\nPor favor, verifica en el sitio web de CRE para detalles espec\u00edficos o contacta a su servicio al cliente.\n\n\u00bfPude resolver tu problema con esta gu\u00eda?"
+      ],
+      "interrupted": false
+    }
+  ]
+}

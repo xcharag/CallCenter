@@ -82,8 +82,8 @@ GROUP BY
                 client_doc = {
                     "client_id": str(client["Id"]),
                     "name": client["NombreCompleto"],
-                    "enterprise_id": str(client["enterprise_id"]),
-                    "enterprise_name": client["enterprise_name"],
+                    "enterprise_id": str(client["enterprise_ids"]),
+                    "enterprise_name": client["enterprise_names"],
                     "type": "client",
                     "carnetIdentidad": client.get("Ci", ""),
                     "email": client.get("Email", ""),
@@ -152,6 +152,7 @@ GROUP BY
         for i, protocol in protocols_df.iterrows():
             # Create markdown content for each protocol
             protocol_content = f"""# {protocol['NombreProtocolo']}
+## protocol_id: {protocol['Id']}
 
 ## Description
 {protocol['Descripcion']}
@@ -222,13 +223,14 @@ def build_vector_index(data_dir="vectordb/knowledge_base", index_dir="./vector_i
 def main():
     # Database connection setup
     print("Connecting to database...")
-    DB_HOST = 'lgg2gx1ha7yp2w0k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'
-    DB_PORT = '3306'
-    DB_USER = 'k2me3e6bdmo8hn7u'
-    DB_PASSWORD = 'psgz7tfu1ldlfd43'
-    DB_NAME = 'up05ekhg5c3zj0wt'
+    DB_HOST = os.environ.get("MYSQL_HOST")
+    DB_PORT = os.environ.get("MYSQL_PORT") or "3306"  # Default MySQL port
+    DB_USER = os.environ.get("MYSQL_USER")
+    DB_PASSWORD = os.environ.get("MYSQL_PASSWORD")
+    DB_NAME = os.environ.get("MYSQL_DATABASE")
 
     connection_string = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    print(f"Using connection string: {connection_string}")
     engine = create_engine(connection_string)
 
     # Test connection
@@ -246,7 +248,6 @@ def main():
     build_vector_index()
 
     print("Vector database creation completed successfully!")
-
 
 if __name__ == "__main__":
     main()

@@ -1,9 +1,9 @@
 {
-  "enterprise_id": "COM003",
-  "name": "Burger King",
+  "enterprise_id": "EM003",
+  "name": "Pizzeria",
   "type": "Company",
   "phoneNumber": "77398598",
-  "email": "burger@gmail.com",
+  "email": "pizza@gmail.com",
   "city": "Santa Cruz",
-  "address": "Av Banzer"
+  "address": "Av virgen de cotoca"
 }

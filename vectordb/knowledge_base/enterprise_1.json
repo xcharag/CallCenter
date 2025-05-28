@@ -1,9 +1,9 @@
 {
-  "enterprise_id": "COM001",
-  "name": "UPSA",
+  "enterprise_id": "EM001",
+  "name": "Cotas",
   "type": "Company",
   "phoneNumber": "77398598",
-  "email": "upsa@upsa.edu.bo",
+  "email": "oscaraguilar@gmail.com",
   "city": "Santa Cruz",
-  "address": "Parque Industrial"
+  "address": "Av Alemana"
 }

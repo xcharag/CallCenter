@@ -1,11 +1,11 @@
 {
   "enterprise_id": "2",
-  "enterprise_name": "Publicarte",
+  "enterprise_name": "Cre",
   "services": [
     {
       "service_id": "3",
-      "name": "Publicaciones",
-      "description": "Este servicio brinda informacion acerca de los proximos lanzamientos de libros, precio y lugar de lanzamiento si es que existe alguno",
+      "name": "Pago de Factura Luz",
+      "description": "Este servicio permite a los usuarios conocer los metodos de pago, para pagar las facturas de luz",
       "type": "service"
     }
   ]

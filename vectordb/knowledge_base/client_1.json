@@ -1,11 +1,11 @@
 {
   "client_id": "1",
-  "name": "Pepe Grillo",
-  "enterprise_id": "2",
-  "enterprise_name": "Publicarte",
+  "name": "Oscar Denes Aguilar Soliz",
+  "enterprise_id": "1, 2, 3",
+  "enterprise_name": "Cotas, Cre, Pizzeria",
   "type": "client",
-  "carnetIdentidad": "2834312",
-  "email": "pepe@gmail.com",
-  "phoneNumber": "77398213",
-  "address": "Calle Alemania"
+  "carnetIdentidad": "77398598",
+  "email": "oscar@gmail.com",
+  "phoneNumber": "77398598",
+  "address": "Av. Alemana "
 }
